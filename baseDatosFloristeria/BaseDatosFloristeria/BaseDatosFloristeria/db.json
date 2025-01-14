@@ -1,0 +1,30 @@
+{
+    "clientes": [
+      { "id": 1, "nombre": "Juan Pérez", "email": "juan.perez@example.com", "telefono": "123456789" },
+      { "id": 2, "nombre": "Ana Gómez", "email": "ana.gomez@example.com", "telefono": "987654321" },
+      { "id": 3, "nombre": "Carlos Ruiz", "email": "carlos.ruiz@example.com", "telefono": "456123789" }
+    ],
+    "flores": [
+      { "id": 1, "nombre": "Rosa Roja", "tipoFlores": 1, "precio": 2.0 },
+      { "id": 2, "nombre": "Lirio Blanco", "tipoFlores": 2, "precio": 1.8 },
+      { "id": 3, "nombre": "Girasol", "tipoFlores": 3, "precio": 1.5 },
+      { "id": 4, "nombre": "Orquídea Morada", "tipoFlores": 4, "precio": 3.0 }
+    ],
+    "empleados": [
+      { "id": 1, "nombre": "María López", "puesto": "Cajera", "salario": 1200.0 },
+      { "id": 2, "nombre": "Pedro Martínez", "puesto": "Florista", "salario": 1500.0 },
+      { "id": 3, "nombre": "Lucía Fernández", "puesto": "Gerente", "salario": 2000.0 }
+    ],
+    "tipo_flores": [
+      { "id": 1, "tipo": "Rosas" },
+      { "id": 2, "tipo": "Lirios" },
+      { "id": 3, "tipo": "Girasoles" },
+      { "id": 4, "tipo": "Orquídeas" }
+    ],
+    "flores_marchitadas": [
+      { "id": 1, "tipoFlores": 1, "fecha": "2024-01-01", "razon": "Exposición al calor" },
+      { "id": 2, "tipoFlores": 2, "fecha": "2024-01-02", "razon": "Falta de agua" },
+      { "id": 3, "tipoFlores": 3, "fecha": "2024-01-03", "razon": "Plagas" }
+    ]
+  }
+  
