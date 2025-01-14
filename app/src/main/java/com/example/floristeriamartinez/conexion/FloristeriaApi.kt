@@ -14,122 +14,122 @@ import retrofit2.http.Path
 
 /*Aqui van TODOS los metodos para obtener cosas de la base de datos. TODOS*/
 interface FloristeriaApi {
-    /*GETS*/
-    @GET("clientes")
-    suspend fun obtenerClientes() : List<Cliente>
+   /*----------------GETS----------------*/
+   @GET("clientes")
+   suspend fun obtenerClientes(): List<Cliente>
 
-    @GET("flores")
-    suspend fun obtenerFlores() : List<Flores>
+   @GET("flores")
+   suspend fun obtenerFlores(): List<Flores>
 
-    @GET("empleados")
-    suspend fun obtenerEmpleado() : List<Empleado>
+   @GET("empleados")
+   suspend fun obtenerEmpleados(): List<Empleado>
 
-    @GET("tipo_flores")
-    suspend fun obtenerTiposFlores() : List<TipoFlores>
+   @GET("tipo_flores")
+   suspend fun obtenerTiposFlores(): List<TipoFlores>
 
-    @GET("clientes")
-    suspend fun obtenerFloresMarchitadas() : List<FloresMarchitadas>
+   @GET("flores_marchitadas")
+   suspend fun obtenerFloresMarchitadas(): List<FloresMarchitadas>
 
-    /*POSTS*/
-    @POST("clientes")
-    suspend fun insertarClientes(
-            @Body
-            cliente : Cliente
-                                ) : Cliente
+   /*----------------POSTS----------------*/
+   @POST("clientes")
+   suspend fun insertarClientes(
+      @Body
+      cliente: Cliente
+   ): Cliente
 
-    @POST("flores")
-    suspend fun insertarFlores(
-            @Body
-            flor : Flores
-                              ) : Flores
+   @POST("flores")
+   suspend fun insertarFlores(
+      @Body
+      flor: Flores
+   ): Flores
 
-    @POST("empleados")
-    suspend fun insertarEmpleado(
-            @Body
-            empleado : Empleado
-                                ) : Empleado
+   @POST("empleados")
+   suspend fun insertarEmpleado(
+      @Body
+      empleado: Empleado
+   ): Empleado
 
-    @POST("tipo_flores")
-    suspend fun insertarTiposFlores(
-            @Body
-            tipoFlores : TipoFlores
-                                   ) : TipoFlores
+   @POST("tipo_flores")
+   suspend fun insertarTiposFlores(
+      @Body
+      tipoFlores: TipoFlores
+   ): TipoFlores
 
-    @POST("clientes")
-    suspend fun insertarFloresMarchitadas(
-            @Body
-            floresMarchitadas : FloresMarchitadas
-                                         ) : FloresMarchitadas
+   @POST("flores_marchitadas")
+   suspend fun insertarFloresMarchitadas(
+      @Body
+      floresMarchitadas: FloresMarchitadas
+   ): FloresMarchitadas
 
-    /*Updates*/
-    @PUT("trabajadores/{id}")
-    suspend fun actualizarClientes(
-            @Path("id")
-            id : Int ,
-            @Body
-            cliente : Cliente
-                                  ) : Cliente
+   /*----------------Updates----------------*/
+   @PUT("trabajadores/{id}")
+   suspend fun actualizarClientes(
+      @Path("id")
+      id: Int,
+      @Body
+      cliente: Cliente
+   ): Cliente
 
-    @PUT("flores/{id}")
-    suspend fun actualizarFlores(
-            @Path("id")
-            id : Int ,
-            @Body
-            flor : Flores
-                                ) : Flores
+   @PUT("flores/{id}")
+   suspend fun actualizarFlores(
+      @Path("id")
+      id: Int,
+      @Body
+      flor: Flores
+   ): Flores
 
-    @PUT("empleados/{id}")
-    suspend fun actualizarEmpleado(
-            @Path("id")
-            id : Int ,
-            @Body
-            empleado : Empleado
-                                  ) : Empleado
+   @PUT("empleados/{id}")
+   suspend fun actualizarEmpleado(
+      @Path("id")
+      id: Int,
+      @Body
+      empleado: Empleado
+   ): Empleado
 
-    @PUT("tipo_flores/{id}")
-    suspend fun actualizarTiposFlores(
-            @Path("id")
-            id : Int ,
-            @Body
-            tipoFlores : TipoFlores
-                                     ) : TipoFlores
+   @PUT("tipo_flores/{id}")
+   suspend fun actualizarTiposFlores(
+      @Path("id")
+      id: Int,
+      @Body
+      tipoFlores: TipoFlores
+   ): TipoFlores
 
-    @PUT("clientes/{id}")
-    suspend fun eliminarFloresMarchitadas(
-            @Path("id")
-            id : Int ,
-            @Body
-            floresMarchitadas : FloresMarchitadas
-                                         ) : FloresMarchitadas
+   @PUT("clientes/{id}")
+   suspend fun eliminarFloresMarchitadas(
+      @Path("id")
+      id: Int,
+      @Body
+      floresMarchitadas: FloresMarchitadas
+   ): FloresMarchitadas
 
-    /*DELETES*/
-    @DELETE("trabajadores/{id}")
-    suspend fun eliminarClientes(
-            @Path("id")
-            id : Int
-                                ) : Cliente
+   /*----------------DELETES----------------*/
+   @DELETE("trabajadores/{id}")
+   suspend fun eliminarClientes(
+      @Path("id")
+      id: Int
+   ): Cliente
 
-    @DELETE("flores/{id}")
-    suspend fun eliminarFlores(
-            @Path("id")
-            id : Int
-                              ) : Flores
+   @DELETE("flores/{id}")
+   suspend fun eliminarFlores(
+      @Path("id")
+      id: Int
+   ): Flores
 
-    @DELETE("empleados/{id}")
-    suspend fun eliminarEmpleado(
-            @Path("id")
-            id : Int
-                                ) : Empleado
+   @DELETE("empleados/{id}")
+   suspend fun eliminarEmpleado(
+      @Path("id")
+      id: Int
+   ): Empleado
 
-    @DELETE("tipo_flores/{id}")
-    suspend fun eliminarTiposFlores(
-            @Path("id")
-            id : Int
-                                   ) : TipoFlores
+   @DELETE("tipo_flores/{id}")
+   suspend fun eliminarTiposFlores(
+      @Path("id")
+      id: Int
+   ): TipoFlores
 
-    @DELETE("clientes/{id}")
-    suspend fun eliminarFloresMarchitadas(
-            @Path("id")
-            id : Int
-                                         ) : FloresMarchitadas
+   @DELETE("flores_marchitadas/{id}")
+   suspend fun eliminarFloresMarchitadas(
+      @Path("id")
+      id: Int
+   ): FloresMarchitadas
 }
