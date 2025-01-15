@@ -14,7 +14,7 @@ import com.example.floristeriamartinez.ui.components.CardFlores
 fun MostrarListaFlores(flores: List<Flores>, modifier: Modifier= Modifier) {
    LazyColumn( modifier = modifier.fillMaxSize(),
       horizontalAlignment = Alignment.CenterHorizontally,
-      verticalArrangement = Arrangement.SpaceBetween
+      verticalArrangement = Arrangement.SpaceEvenly
    ) {
       items(flores) { flor ->
          CardFlores(flor)

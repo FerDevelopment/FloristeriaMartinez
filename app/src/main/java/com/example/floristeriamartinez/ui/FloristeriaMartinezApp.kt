@@ -130,14 +130,14 @@ fun FloristeriaMartinezApp(
          }
          composable(route = Pantallas.PantallaFlores.name) {
             /*Pantalla inicial*/
-            viewModel.obtenerFlores()
+
             when (uiState) {
                is FloristeriaUIState.ObtenerExitoFlores -> {
                   MostrarListaFlores(uiState.flores)
                }
 
                else -> {
-
+                  viewModel.obtenerFlores()
                }
             }
          }
