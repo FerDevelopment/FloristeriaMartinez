@@ -83,7 +83,7 @@ val listaRutas = listOf(
 fun FloristeriaMartinezApp(
    viewModel: FloristeriaViewModel = viewModel(factory = FloristeriaViewModel.Factory),
    navController: NavHostController = rememberNavController(),
-   ) {
+) {
    var selectedItem by remember { mutableIntStateOf(0) }
 
    Scaffold(
@@ -131,8 +131,14 @@ fun FloristeriaMartinezApp(
          composable(route = Pantallas.PantallaFlores.name) {
             /*Pantalla inicial*/
             viewModel.obtenerFlores()
-            if (uiState is FloristeriaUIState.ObtenerExitoFlores) {
-               MostrarListaFlores(uiState.flores)
+            when (uiState) {
+               is FloristeriaUIState.ObtenerExitoFlores -> {
+                  MostrarListaFlores(uiState.flores)
+               }
+
+               else -> {
+
+               }
             }
          }
          composable(route = Pantallas.PantallaClientes.name) {

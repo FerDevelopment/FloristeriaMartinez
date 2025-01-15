@@ -76,8 +76,7 @@ class FloristeriaViewModel(private val floristeriaRepositorio: FloristeriaReposi
       private set
    var florMarchitadaPulsada: FloresMarchitadas by mutableStateOf(FloresMarchitadas(0, 0, "", ""))
 
-   /*------------------Funciones-----------------*/
-   /*Clientes*/
+   /*------------------Funciones-----------------*//*Clientes*/
    fun obtenerClientes() {
       viewModelScope.launch {
          floristeriaUIState = FloristeriaUIState.Cargando
@@ -90,6 +89,10 @@ class FloristeriaViewModel(private val floristeriaRepositorio: FloristeriaReposi
             FloristeriaUIState.Error
          }
       }
+   }
+
+   init {
+      obtenerFlores()
    }
 
    /*Flores*/
