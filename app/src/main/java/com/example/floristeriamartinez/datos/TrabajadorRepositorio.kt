@@ -53,19 +53,19 @@ class ConexionFloristeriaRepositorio(private val floristeriaApi: FloristeriaApi
 
    override suspend fun eliminarTrabajador(id: Int): Empleado = floristeriaApi.eliminarEmpleado(id)
 
-   // Métodos para Flores
+   /* Métodos para Flores */
    override suspend fun obtenerFlores(): List<Flores>
    override suspend fun insertarFlor(flor: Flores): Flores
    override suspend fun actualizarFlor(id: String, flor: Flores): Flores
    override suspend fun eliminarFlor(id: String): Flores
 
-   // Métodos para Tipos de Flores
+   /* Métodos para Tipos de Flores */
    override suspend fun obtenerTiposFlores(): List<TipoFlores>
    override suspend fun insertarTipoFlor(tipoFlor: TipoFlores): TipoFlores
    override suspend fun actualizarTipoFlor(id: String, tipoFlor: TipoFlores): TipoFlores
    override suspend fun eliminarTipoFlor(id: String): TipoFlores
 
-   // Métodos para Flores Marchitadas
+   /* Métodos para Flores Marchitadas */
    override suspend fun obtenerFloresMarchitadas(): List<FloresMarchitadas>
    override suspend fun insertarFlorMarchitada(florMarchitada: FloresMarchitadas): FloresMarchitadas
    override suspend fun actualizarFlorMarchitada(id: String, florMarchitada: FloresMarchitadas
@@ -73,7 +73,7 @@ class ConexionFloristeriaRepositorio(private val floristeriaApi: FloristeriaApi
 
    override suspend fun eliminarFlorMarchitada(id: String): FloresMarchitadas
 
-   // Métodos para Clientes
+   /* Métodos para Clientes */
    override suspend fun obtenerClientes(): List<Cliente>
    override suspend fun insertarCliente(cliente: Cliente): Cliente
    override suspend fun actualizarCliente(id: String, cliente: Cliente): Cliente
