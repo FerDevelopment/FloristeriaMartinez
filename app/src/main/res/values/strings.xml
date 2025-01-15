@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Floristeria Martinez</string>
+    <string name="clientes">Clientes</string>
+    <string name="pantalla_inicio">Flores\n</string>
+    <string name="flores">Flores</string>
+    <string name="empleados">Empleados</string>
+    <string name="tipoFlores">Tipo de flores</string>
+    <string name="floresMarchitadas">Flores Marchitadas</string>
 </resources>

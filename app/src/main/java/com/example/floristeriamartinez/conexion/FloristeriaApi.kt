@@ -62,7 +62,7 @@ interface FloristeriaApi {
    ): FloresMarchitadas
 
    /*----------------Updates----------------*/
-   @PUT("trabajadores/{id}")
+   @PUT("clientes/{id}")
    suspend fun actualizarClientes(
       @Path("id")
       id: Int,
@@ -93,17 +93,15 @@ interface FloristeriaApi {
       @Body
       tipoFlores: TipoFlores
    ): TipoFlores
-
-   @PUT("clientes/{id}")
-   suspend fun eliminarFloresMarchitadas(
+   @PUT("flores_marchitadas/{id}")
+   suspend fun actualizarFloresMarchita(
       @Path("id")
       id: Int,
       @Body
       floresMarchitadas: FloresMarchitadas
    ): FloresMarchitadas
-
    /*----------------DELETES----------------*/
-   @DELETE("trabajadores/{id}")
+   @DELETE("clientes/{id}")
    suspend fun eliminarClientes(
       @Path("id")
       id: Int
@@ -132,4 +130,6 @@ interface FloristeriaApi {
       @Path("id")
       id: Int
    ): FloresMarchitadas
+
+
 }
